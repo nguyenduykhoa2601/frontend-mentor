@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Lesson1 from './Lessons/Lesson1/Lesson1';
+import Lesson2 from './Lessons/Lesson2/Lesson2';
 
 function App() {
   return (
     <div className="App">
-      <Lesson1 />
+      <Lesson2 />
     </div>
   );
 }
 
 export default App;
+
