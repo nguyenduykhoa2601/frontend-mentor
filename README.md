@@ -15,3 +15,10 @@
  My Project had reponsive Desktop and Mobile.
  
  More detail: https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt
+ 
+ ## Project 1
+ It is about **Intro-section-with-dropdown-navigation-main** with Level Junior.
+ 
+ My Project had both reponsive Desktop and Mobile with icon and animation.
+ 
+ More detail: [https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
