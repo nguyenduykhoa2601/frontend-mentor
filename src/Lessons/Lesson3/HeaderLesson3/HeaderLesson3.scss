@@ -1,0 +1,276 @@
+.header-lesson3 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: 0.5px solid hsl(0, 18%, 92%);
+  margin-left: 60px;
+  margin-right: 60px;
+  position: relative;
+  align-items: center;
+  @media screen and(max-width: 992px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__left {
+    display: flex;
+    text-align: bottom;
+    align-items: center;
+    &-menu {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      &-item {
+        margin-left: 30px;
+        font-size: 18px;
+        text-align: bottom;
+        position: relative;
+        .hover-line {
+          display: block;
+          position: absolute;
+          width: 0;
+          bottom: -41px;
+          left: -30px;
+          background-color: hsl(26, 100%, 55%);
+          height: 3px;
+          animation-duration: 1s;
+          animation-name: animationHoverLine;
+          animation-duration: 0.1s;
+          animation-direction: alternate;
+          animation-timing-function: linear;
+          -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+          -moz-animation-fill-mode: forwards; /* FF 5+ */
+          -o-animation-fill-mode: forwards; /* Not implemented yet */
+          -ms-animation-fill-mode: forwards; /* IE 10+ */
+          animation-fill-mode: forwards;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-close {
+        display: none;
+      }
+      @media screen and (max-width: 992px) {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: white;
+        z-index: 999999999999;
+        text-align: left;
+        padding-top: 90px;
+        width: 80vw;
+        max-width: 275px;
+        animation-duration: 0.2s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards; /* FF 5+ */
+        -o-animation-fill-mode: forwards; /* Not implemented yet */
+        -ms-animation-fill-mode: forwards; /* IE 10+ */
+        animation-fill-mode: forwards;
+        &-item {
+          margin-left: 0;
+          font-weight: 700;
+          padding-left: 25px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          .hover-line {
+            display: none;
+          }
+        }
+        &-close {
+          position: absolute;
+          display: block;
+          top: 25px;
+          left: 25px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-logo {
+      font-size: 36px;
+      font-weight: 700;
+      margin-right: 60px;
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and(max-width: 992px) {
+        font-size: 30px;
+      }
+    }
+    &-icon-menu {
+      display: none;
+      @media screen and(max-width: 992px) {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    &-avatar {
+      img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 3px solid hsl(26, 100%, 55%);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &-cart {
+      margin-right: 30px;
+      position: relative;
+      @media screen and(max-width: 992px) {
+        position: inherit;
+        .cart-detail {
+          position: absolute;
+          left: 0 !important;
+          right: 0 !important;
+          top: 100% !important;
+          transform: translateX(0) !important;
+          width: 95% !important;
+          margin-top: 10px !important;
+          margin-left: 2.5%;
+          box-shadow: 0px 1px 5px #e2dddd !important;
+          &::after {
+            display: none;
+          }
+        }
+      }
+      .cart-detail {
+        position: absolute;
+        display: block;
+        top: 100%;
+        transform: translateX(-50%);
+        width: max-content;
+        box-shadow: 0px 1px 5px #e2dddd;
+        animation-name: animationCartHover;
+        animation-duration: 0.2s;
+        max-height: 300px;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards; /* FF 5+ */
+        -o-animation-fill-mode: forwards; /* Not implemented yet */
+        -ms-animation-fill-mode: forwards; /* IE 10+ */
+        animation-fill-mode: forwards;
+        margin-top: 35px;
+
+        border-radius: 5px;
+        z-index: 10;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: -50px;
+          right: 35%;
+          max-width: 60px;
+          width: 100%;
+          height: 70px;
+          background-color: transparent;
+          z-index: 2;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 15px;
+          background-color: transparent;
+          z-index: 2;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .cart-detail {
+          &::after {
+            background-color: white;
+          }
+        }
+      }
+      &-number {
+        position: absolute;
+        top: -8px;
+        right: -10px;
+        background-color: hsl(26, 100%, 55%);
+        border-radius: 10px;
+        padding: 1px 8px;
+        color: hsl(25, 100%, 94%);
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@keyframes animationHoverLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animationOutLine {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes animationCartHover {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: max-content;
+  }
+}
+
+@keyframes animationCartOutHover {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes animationMenuMobileFadeIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animationMenuMobileFadeOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,20 @@
+.lesson3 {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Kumbh Sans', sans-serif;
+  // overflow: hidden;
+}
+.overlay-lesson3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 99999999999;
+  @media screen and (max-width: 890px) {
+    display: block;
+  }
+}
