@@ -22,7 +22,6 @@ const BodyLesson3: React.FC<any> = ({ productDetail }) => {
   };
   return (
     <div className='body-lesson3'>
-      <iframe src='http://157.119.251.140:5015/write-book/493' />
       <SliderLesson3 images={productDetail.images} />
       <div className='body-lesson3__detail'>
         <div className='body-lesson3__detail-company'>

@@ -60,7 +60,7 @@ const HeaderLesson3: React.FC<any> = () => {
                     animationName:
                       index === currentHoverMenu
                         ? 'animationHoverLine'
-                        : 'animationCartOutHover',
+                        : 'animationOutLine',
                     width: currentHoverMenu === index ? '100%' : 'auto',
                   }}
                   className='header-lesson3__left-menu-item hover-line'
