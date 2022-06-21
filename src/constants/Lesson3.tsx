@@ -16,109 +16,27 @@ export const dataLesson3 = {
     detail:
       "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
     price: '250.00',
-    sale: '50%',
+    sale: '50',
     images: [
       {
-        image1: ImageProduct1,
-        imageThumbnail1: ImageThumbnailProduct1,
+        image: ImageProduct1,
+        imageThumbnail: ImageThumbnailProduct1,
       },
       {
-        image2: ImageProduct2,
-        imageThumbnail2: ImageThumbnailProduct2,
+        image: ImageProduct2,
+        imageThumbnail: ImageThumbnailProduct2,
       },
       {
-        image3: ImageProduct3,
-        imageThumbnail3: ImageThumbnailProduct3,
+        image: ImageProduct3,
+        imageThumbnail: ImageThumbnailProduct3,
       },
       {
-        image4: ImageProduct4,
-        imageThumbnail4: ImageThumbnailProduct4,
+        image: ImageProduct4,
+        imageThumbnail: ImageThumbnailProduct4,
       },
     ],
   },
   avatar: AvatarImage,
 };
-export const fakeDataCart = [
-  {
-    company: 'sneaker company',
-    name: 'Fall Limit Edition Sneakers',
-    detail:
-      "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
-    price: '250.00',
-    sale: '50%',
-    numberous: 3,
-    images: [
-      {
-        image1: ImageProduct1,
-        imageThumbnail1: ImageThumbnailProduct1,
-      },
-      {
-        image2: ImageProduct2,
-        imageThumbnail2: ImageThumbnailProduct2,
-      },
-      {
-        image3: ImageProduct3,
-        imageThumbnail3: ImageThumbnailProduct3,
-      },
-      {
-        image4: ImageProduct4,
-        imageThumbnail4: ImageThumbnailProduct4,
-      },
-    ],
-  },
-  {
-    company: 'sneaker company',
-    name: 'Fall Limit Edition Sneakers',
-    detail:
-      "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
-    price: '250.00',
-    sale: '50%',
-    numberous: 3,
-    images: [
-      {
-        image1: ImageProduct1,
-        imageThumbnail1: ImageThumbnailProduct1,
-      },
-      {
-        image2: ImageProduct2,
-        imageThumbnail2: ImageThumbnailProduct2,
-      },
-      {
-        image3: ImageProduct3,
-        imageThumbnail3: ImageThumbnailProduct3,
-      },
-      {
-        image4: ImageProduct4,
-        imageThumbnail4: ImageThumbnailProduct4,
-      },
-    ],
-  },
-  {
-    company: 'sneaker company',
-    name: 'Fall Limit Edition Sneakers',
-    detail:
-      "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
-    price: '250.00',
-    sale: '50%',
-    numberous: 3,
-    images: [
-      {
-        image1: ImageProduct1,
-        imageThumbnail1: ImageThumbnailProduct1,
-      },
-      {
-        image2: ImageProduct2,
-        imageThumbnail2: ImageThumbnailProduct2,
-      },
-      {
-        image3: ImageProduct3,
-        imageThumbnail3: ImageThumbnailProduct3,
-      },
-      {
-        image4: ImageProduct4,
-        imageThumbnail4: ImageThumbnailProduct4,
-      },
-    ],
-  },
-];
+export const fakeDataCart = [];
 export const MenuLesson3 = ['Collections', 'Men', 'Women', 'About', 'Contact'];

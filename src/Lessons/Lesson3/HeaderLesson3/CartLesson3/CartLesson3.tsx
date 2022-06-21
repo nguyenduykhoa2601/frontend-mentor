@@ -4,24 +4,22 @@ import { GlobalStateLesson3 } from '../../GlobalStateLesson3';
 import './CartLesson3.scss';
 
 const CartLesson3: React.FC<any> = () => {
-  // const cart = useContext(GlobalContext).cart;
   //@ts-ignore
   const [cart, setCart] = useContext(GlobalStateLesson3).cart;
   const handleDeleteItem = (item: any) => {
-    let newCart = [];
-    newCart.push(cart[0]);
-    setCart(newCart);
+    setCart([]);
   };
+
   return (
     <div className='cart-lesson3'>
       <div className='cart-lesson3-header'>Cart</div>
       <div className='cart-lesson3-info'>
-        {cart.length === 0 ? (
+        {cart.length > 0 ? (
           cart.map((item: any, index: number) => {
             return (
               <div className='cart-lesson3-info__item' key={index}>
                 <div className='cart-lesson3-info__item-thumbnail'>
-                  <img src={item?.images[0]?.imageThumbnail1} alt='' />
+                  <img src={item?.images[0]?.imageThumbnail} alt='' />
                 </div>
                 <div className='cart-lesson3-info__item-info'>
                   <div className='cart-lesson3-info__item-name'>

@@ -1,0 +1,176 @@
+.slider-lesson3 {
+  flex: 1;
+  max-width: 100%;
+  // background-color: beige;
+  &__desktop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-main-image {
+      max-width: 350px;
+      max-height: 350px;
+      background-repeat: 20px;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+      overflow: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &-list-images {
+      display: flex;
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 20px;
+      position: relative;
+      justify-content: space-between;
+    }
+    &-thumbnail {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        border-radius: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &-border {
+      display: block;
+      position: absolute;
+      left: 0;
+      background-color: transparent;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      // margin-left: 13px;
+      border: 2px solid hsl(26, 100%, 55%);
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+      -moz-animation-fill-mode: forwards; /* FF 5+ */
+      -o-animation-fill-mode: forwards; /* Not implemented yet */
+      -ms-animation-fill-mode: forwards; /* IE 10+ */
+      animation-fill-mode: forwards;
+    }
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__mobile {
+    width: 100%;
+    display: none;
+    position: relative;
+    @media screen and(max-width: 992px) {
+      display: block;
+    }
+    &-main-image {
+      display: flex;
+      max-width: 512px;
+      max-height: 300px;
+      overflow: scroll;
+      margin: 0 auto;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &-icon-previous {
+      position: absolute;
+      left: 15px;
+      top: 45%;
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+      svg {
+        margin-left: -4px;
+        transform: scale(0.7);
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &-icon-next {
+      position: absolute;
+      right: 15px;
+      top: 45%;
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+      svg {
+        margin-right: -4px;
+        transform: scale(0.7);
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &-action {
+      position: absolute;
+      display: flex;
+      max-width: 512px;
+      max-height: 300px;
+      // overflow: scroll;
+      margin: 0 auto;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@keyframes animationSliderLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes animationSliderRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}

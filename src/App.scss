@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 html {
   font-size: 62.5%;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 body {
   max-width: 1440px;

@@ -1,18 +1,18 @@
 import { useContext, useState } from 'react';
 import { IconCart } from '../../../assets/Lesson3/svg/IconCart';
-import { dataLesson3, MenuLesson3 } from '../../../constants/Lesson3';
-import CartLesson3 from './CartLesson3/CartLesson3';
-import { GlobalStateLesson3 } from '../GlobalStateLesson3';
-import './HeaderLesson3.scss';
-import { IconMenu } from '../../../assets/Lesson3/svg/IconMenu';
 import { IconClose } from '../../../assets/Lesson3/svg/IconClose';
+import { IconMenu } from '../../../assets/Lesson3/svg/IconMenu';
+import { dataLesson3, MenuLesson3 } from '../../../constants/Lesson3';
+import { GlobalStateLesson3 } from '../GlobalStateLesson3';
+import CartLesson3 from './CartLesson3/CartLesson3';
+import './HeaderLesson3.scss';
 
 const HeaderLesson3: React.FC<any> = () => {
   const [currentHoverMenu, setCurrentHoverMenu] = useState<number>(-1);
   const [isHoverCart, setIsHoverCart] = useState<boolean>(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   //@ts-ignore
-  const [cart, setCart] = useContext(GlobalStateLesson3).cart;
+  const [cart] = useContext(GlobalStateLesson3).cart;
   return (
     <div className='header-lesson3'>
       <div className='header-lesson3__left'>
@@ -91,7 +91,7 @@ const HeaderLesson3: React.FC<any> = () => {
           >
             <CartLesson3 />
           </div>
-          {cart.length === 0 && (
+          {cart.length > 0 && (
             <div className='header-lesson3__right-cart-number'>
               {cart.length}
             </div>
